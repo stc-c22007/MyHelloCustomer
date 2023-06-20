@@ -44,17 +44,17 @@ public class MainActivity extends AppCompatActivity {
             if(id == R.id.btClick){
                 String inputStr = input.getText().toString();
                 String inputStr2 = input2.getText().toString();
-                output.setText(inputStr2 + "にお住いの" + inputStr + "さん、こんにちは！");
+                output.setText(inputStr2 );
             } else if (id == R.id.btClear) {
                 input2.setText("");
                 String inputStr = input.getText().toString();
                 String inputStr2 = input2.getText().toString();
-                output.setText("にお住いの" + inputStr + "さん、こんにちは！");
+                output.setText(inputStr);
             }else if(id == R.id.btClear2){
                 input.setText("");
                 String inputStr = input.getText().toString();
                 String inputStr2 = input2.getText().toString();
-                output.setText(inputStr2 + "にお住いの"  + "さん、こんにちは！");
+                output.setText(inputStr2 );
             }
         }
     }
