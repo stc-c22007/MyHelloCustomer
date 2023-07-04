@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         btClick.setOnClickListener(listener);
 
         //クリアボタンであるButtonオブジェクトの取得
-        Button btClear = findViewById(R.id.btClear);
-        Button btClear2 = findViewById(R.id.btClear2);
+        Button btClear = findViewById(R.id.btClear2);
+        Button btClear2 = findViewById(R.id.btClear);
         //クリアボタンにリスナを設定
         btClear.setOnClickListener(listener);
         btClear2.setOnClickListener(listener);
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             //名前入力欄であるEdittextオブジェクトを取得
             EditText input = findViewById(R.id.etName);
-            EditText input2 = findViewById(R.id.etName2);
+            EditText input2 = findViewById(R.id.etHome);
             //メッセージを表示するTextViewオブジェクトを取得
             TextView output = findViewById(R.id.tvOutput);
 
@@ -44,18 +44,18 @@ public class MainActivity extends AppCompatActivity {
             if(id == R.id.btClick){
                 String inputStr = input.getText().toString();
                 String inputStr2 = input2.getText().toString();
-                output.setText(inputStr2 );
-            } else if (id == R.id.btClear) {
+                output.setText(inputStr2 + "にお住いの" + inputStr + "さん、こんにちは！");
+            } else if (id == R.id.btClear2) {
                 input2.setText("");
                 String inputStr = input.getText().toString();
                 String inputStr2 = input2.getText().toString();
-                output.setText(inputStr);
-            }else if(id == R.id.btClear2){
+            }else if(id == R.id.btClear){
                 input.setText("");
                 String inputStr = input.getText().toString();
                 String inputStr2 = input2.getText().toString();
-                output.setText(inputStr2 );
             }
         }
     }
 }
+
+
